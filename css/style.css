@@ -1,0 +1,56 @@
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.color-white {
+	color:#fff;
+}
+
+.margin-top-20px {
+	margin-top: 20px;
+}
+
+body nav#mainNav div.container-fluid div.navbar-header a#a_logo {
+	padding:5px 0;
+	padding-left: 15px;
+}
+
+body nav#mainNav div.container-fluid div.navbar-header a#a_logo img#img_logo {
+	height:100%;
+}
+
+/* graphing */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.legend rect {
+  fill:white;
+  stroke:black;
+  opacity:0.8;
+}
+
+.tick text{
+	font-size: 12px;
+}
+
+.tick line{
+	opacity: 0.2;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LymphaTech Kinect Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/tipsy.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="a_logo" class="navbar-brand page-scroll" href="#page-top">
+                    <img id="img_logo" src="img/lymphatech_logo_transparent.jpg"/>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="logged-out">
+                        <a id="a_login" class="page-scroll" href="#section_login">Login</a>
+                    </li>
+                    <li class="logged-out">
+                        <a class="page-scroll" href="#section_register">Register</a>
+                    </li>
+                    <li class="logged-in">
+                        <a id="a_user" class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li class="logged-in">
+                        <a id="a_logout" class="page-scroll" href="#page-top">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header class="logged-out">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Welcome To The LymphaTech Kinect Project</h1>
+                <hr>
+                <p>We work hard to help monitor your health!</p>
+                <a href="#section_login" class="btn btn-primary btn-xl page-scroll">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary logged-out" id="section_login">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 text-center">
+                    <h2 class="section-heading">User Login</h2>
+                    <hr class="light">
+                    <form id="form_login">
+                        <fieldset class="form-group">
+                            <label for="input_login_email" class="sr-only">Email</label>
+                            <input type="email" id="input_login_email" class="form-control" placeholder="Email" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_login_password" class="sr-only">Password</label>
+                            <input type="password" id="input_login_password" class="form-control" placeholder="Password" required>
+                        </fieldset>
+                        <br/>
+                        <div id="div_login_message"></div>
+                        <fieldset class="form-group">
+                            <button class="btn btn-default btn-xl" id="button_login" type="button">Login</button>
+                        </fieldset>
+                        <a href="#section_register" class="page-scroll">
+                            <h4 class="color-white">Don't have an account? Click here to register</h4>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section_register" class="logged-out">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Register</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3 text-center">
+                    <form id="form_register">
+                        <fieldset class="form-group">
+                            <label for="input_register_name" class="sr-only">Name</label>
+                            <input type="text" id="input_register_name" class="form-control" placeholder="Name" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_register_email" class="sr-only">Email</label>
+                            <input type="email" id="input_register_email" class="form-control" placeholder="Email" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_register_password" class="sr-only">Password</label>
+                            <input type="password" id="input_register_password" class="form-control" placeholder="Password" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_register_clinic" class="sr-only">Clinic</label>
+                            <input type="text" id="input_register_clinic" class="form-control" placeholder="Clinic">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="input_register_termsAndConditions">
+                                    I agree to the Terms and Conditions
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div id="div_register_message"></div>
+                        <button class="btn btn-primary btn-xl" id="button_register" type="button">Register</button>
+                        <br/>
+                        <a href="#section_login" class="page-scroll">
+                            <h4>Already have an account? Click here to login</h4>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patients Section -->
+    <section id="section_patients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Patients</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <table id="table_patients" class="table table-striped">
+                    </table>
+                    <div id="div_patients_message"></div>
+                </div>
+            </div>
+            <div class="row text-center margin-top-20px">
+                <div class="col-lg-2 col-lg-offset-5">
+                    <button class="btn btn-primary btn-xl" type="button" data-toggle="modal" data-target="#modal_addPatient">Add Patient</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- View Patient Section -->
+    <section id="section_viewPatient">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading"><span id="span_viewPatient_name"></span></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div id="div_viewPatient_message"></div>
+                    <form id="form_viewPatient">
+                        <input id="input_viewPatient_uid" type="hidden"/>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_name">Name</label>
+                            <input type="text" id="input_viewPatient_name" class="form-control" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_email">Email</label>
+                            <input type="email" id="input_viewPatient_email" class="form-control" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_dateOfBirth">Date of Birth</label>
+                            <input type="date" id="input_viewPatient_dateOfBirth" class="form-control" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_height">Height</label>
+                            <input type="text" id="input_viewPatient_height" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Dominant Hand</label>
+                            <div class="checkbox">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_viewPatient_dominantHand"
+                                           id="input_viewPatient_dominantHand_left"
+                                           value="Left">
+                                    Left
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_viewPatient_dominantHand"
+                                           id="input_viewPatient_dominantHand_right"
+                                           value="Right">
+                                    Right
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Affected Side</label>
+                            <div class="checkbox">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_viewPatient_affectedSide"
+                                           id="input_viewPatient_affectedSide_left"
+                                           value="Left">
+                                    Left
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_viewPatient_affectedSide"
+                                           id="input_viewPatient_affectedSide_right"
+                                           value="Right">
+                                    Right
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="textarea_viewPatient_surgicalHistory">Surgical History</label>
+                            <textarea id="textarea_viewPatient_surgicalHistory" class="form-control" row="10"></textarea>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_radiation">Radiation</label>
+                            <input type="text" id="input_viewPatient_radiation" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_chemotherapy">Chemotherapy</label>
+                            <input type="text" id="input_viewPatient_chemotherapy" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_numberOfLymphnodesRemoved">Number of Lymphnodes Removed</label>
+                            <input type="number" id="input_viewPatient_numberOfLymphnodesRemoved" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_viewPatient_numberOfLymphnodesPositive">Number of Lymphnodes Positive</label>
+                            <input type="number" id="input_viewPatient_numberOfLymphnodesPositive" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="textarea_viewPatient_lymphedemaHistory">Lymphedema History</label>
+                            <textarea id="textarea_viewPatient_lymphedemaHistory" class="form-control" row="10"></textarea>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="row text-center margin-top-20px">
+                <div class="col-lg-12">
+                    <button class="btn btn-danger btn-xl backToPatients" type="button">Back to Patients</button>
+                    <button id="button_viewPatient_saveChanges" class="btn btn-success btn-xl" type="button">Save changes</button>
+                    <button id="button_viewPatient_viewPatientData" class="btn btn-primary btn-xl" type="button">View Patient Data</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- View Patient Data Section -->
+    <section id="section_viewPatientData">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading"><span id="span_viewPatientData_name"></span></h2>
+                </div>
+                <div class="col-lg-12 margin-top-20px">
+                    <div id="div_viewPatientData_message"></div>
+                </div>
+                <div class="col-lg-12">
+                    <div id="div_viewPatientData_data"></div>
+                </div>
+                <div class="col-lg-12 margin-top-20px">
+                    <button class="btn btn-danger btn-xl backToPatients" type="button">Back to Patients</button>
+                    <button id="button_viewPatientData_viewPatientInfo" class="btn btn-primary btn-xl" type="button">View Patient Info</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Patient Modal -->
+    <div id="modal_addPatient" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-bold">Add Patient</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form_addPatient">
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_name">Name</label>
+                            <input type="text" id="input_addPatient_name" class="form-control" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_email">Email</label>
+                            <input type="email" id="input_addPatient_email" class="form-control" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_dateOfBirth">Date of Birth</label>
+                            <input type="date" id="input_addPatient_dateOfBirth" class="form-control" required>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_height">Height</label>
+                            <input type="text" id="input_addPatient_height" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Dominant Hand</label>
+                            <div class="checkbox">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_addPatient_dominantHand"
+                                           id="input_addPatient_dominantHand_left"
+                                           value="Left">
+                                    Left
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_addPatient_dominantHand"
+                                           id="input_addPatient_dominantHand_right"
+                                           value="Right">
+                                    Right
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Affected Side</label>
+                            <div class="checkbox">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_addPatient_affectedSide"
+                                           id="input_addPatient_affectedSide_left"
+                                           value="Left">
+                                    Left
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" 
+                                           name="input_addPatient_affectedSide"
+                                           id="input_addPatient_affectedSide_right"
+                                           value="Right">
+                                    Right
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="textarea_addPatient_surgicalHistory">Surgical History</label>
+                            <textarea id="textarea_addPatient_surgicalHistory" class="form-control" row="10"></textarea>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_radiation">Radiation</label>
+                            <input type="text" id="input_addPatient_radiation" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_chemotherapy">Chemotherapy</label>
+                            <input type="text" id="input_addPatient_chemotherapy" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_numberOfLymphnodesRemoved">Number of Lymphnodes Removed</label>
+                            <input type="number" id="input_addPatient_numberOfLymphnodesRemoved" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="input_addPatient_numberOfLymphnodesPositive">Number of Lymphnodes Positive</label>
+                            <input type="number" id="input_addPatient_numberOfLymphnodesPositive" class="form-control">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="textarea_addPatient_lymphedemaHistory">Lymphedema History</label>
+                            <textarea id="textarea_addPatient_lymphedemaHistory" class="form-control" row="10"></textarea>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="button_addPatient_cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success" id="button_addPatient">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- jQuery cookie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+    <!-- FireBase Javascript -->
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+    <!-- D3 Javascript -->
+    <script src="http://d3js.org/d3.v3.js"></script>
+
+    <!-- Custom Functional JavaScript -->
+    <script src="js/d3.legend.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.tipsy.js"></script>
+
+</body>
+
+</html>
