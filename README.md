@@ -1,6 +1,6 @@
-# Lymphatech Kinect
+# LymphaTech Kinect
 
-Web application for the Lymphatech Kinect Project
+Web application for the LymphaTech Kinect Project
 
 ## Getting Started
 
